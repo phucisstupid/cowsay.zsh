@@ -1,6 +1,6 @@
 # 🐮 cowsay.zsh
 
-A simple Zsh plugin that displays a joke with `cowsay` and `lolcat` every time you open a terminal.
+Zsh plugin that displays a joke with `cowsay` and `lolcat` every time you open a terminal.
 
 ## 📥 Installation
 
