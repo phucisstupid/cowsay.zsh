@@ -32,10 +32,12 @@ If you don't want automatic display:
 You can also manually trigger it:
 ```sh
 joke
+# for cowsay
 ```
 or:
 ```sh
 dadjoke
+# for cowthink
 ```
 
 ## 🔄 Automatic Joke Updates
