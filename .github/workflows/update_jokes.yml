@@ -1,0 +1,36 @@
+name: Update Jokes
+
+on:
+  schedule:
+    - cron: "0 0 * * *"  # Runs every day at midnight UTC
+  workflow_dispatch:  # Allows manual trigger
+
+jobs:
+  update-jokes:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true  # Ensures pushing works
+
+      - name: Ensure cowsay directory exists
+        run: mkdir -p cowsay
+
+      - name: Fetch new jokes and clean formatting
+        run: |
+          {
+            seq 1 100 | xargs -I{} curl -s -H "Accept: application/json" "https://icanhazdadjoke.com/" | jq -r '.joke'
+            echo "Updated on $(date)"
+          } | awk 'BEGIN { ORS=" " } { print $0 "\n" }' > cowsay/jokes.txt
+
+      - name: Commit and push changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add cowsay/jokes.txt
+          git commit -m "Auto-update jokes.txt [$(date)]" --allow-empty
+          git push origin main
