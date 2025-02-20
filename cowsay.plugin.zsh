@@ -30,6 +30,6 @@
   alias dadjoke=dadjoke
 
   if [[ -z "$NO_JOKE_ON_STARTUP" ]]; then
-    joke
+    (joke &)  # Run in background to avoid overriding the shell prompt
   fi
 }
