@@ -4,20 +4,10 @@ A simple Zsh plugin that displays a joke with `cowsay` and `lolcat` every time y
 
 ## 📥 Installation
 
-### Using Oh My Zsh
-1. Clone this repository into your custom plugins directory:
+### Using Zinit🌻
    ```sh
-   git clone https://github.com/phucleeuwu/cowsay.zsh.git ~/.oh-my-zsh/custom/plugins/cowsay
+   zinit depth"1" lucid nocd light-mode atload"joke" for phucleeuwu/cowsay.zsh 
    ```
-2. Edit your `~/.zshrc` and add `cowsay` to your plugin list:
-   ```sh
-   plugins=(git cowsay)
-   ```
-3. Restart your terminal:
-   ```sh
-   source ~/.zshrc
-   ```
-
 ### Manual Installation
 1. Clone the repository:
    ```sh
@@ -33,15 +23,28 @@ A simple Zsh plugin that displays a joke with `cowsay` and `lolcat` every time y
    ```
 
 ## 🛠 Usage
-Just open your terminal! The plugin will automatically display a joke every session.
+Just open your terminal! The plugin will automatically display a joke every session 
+If you don't want automatic display:
+   ```sh
+   zinit depth"1" lucid nocd light-mode for phucleeuwu/cowsay.zsh 
+   ```
 
 You can also manually trigger it:
 ```sh
 joke
 ```
+or:
+```sh
+dadjoke
+```
 
 ## 🔄 Automatic Joke Updates
 This repository includes a GitHub Actions workflow to update `jokes.txt` daily.
+To update jokes, use git pull for git install
+Zinit update:
+```sh
+zinit update phucleeuwu/cowsay.zsh
+```
 
 ### Workflow Details:
 - Fetches 100 new jokes from `icanhazdadjoke.com`
