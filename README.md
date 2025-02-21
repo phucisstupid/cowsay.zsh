@@ -62,7 +62,7 @@ You can customize the joke behavior by modifying `joke.plugin.zsh`. Here’s wha
 ## 🐧 Dependencies
 Ensure you have these installed:
 - `cowsay`
-- `lolcat`
+- `lolcat` (optinal)
 - `ripgrep (rg)`
 - `jq`
 
