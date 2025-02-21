@@ -8,6 +8,6 @@
     return
   fi
 
-  alias joke="rg -v '^\s*$' \"$jokes_file\" | shuf -n 1 | cowsay -f \"\$(ls \"$cowsay_path\" | shuf -n 1)\" | lolcat"
-  alias dadjoke="rg -v '^\s*$' \"$jokes_file\" | shuf -n 1 | cowthink -f \"\$(ls \"$cowsay_path\" | shuf -n 1)\" | lolcat"
+  alias joke="rg -v '^\s*$' \"$jokes_file\" | shuf -n 1 | cowsay -f \"\$(ls \"$cowsay_path\" | shuf -n 1)\" "
+  alias dadjoke="rg -v '^\s*$' \"$jokes_file\" | shuf -n 1 | cowthink -f \"\$(ls \"$cowsay_path\" | shuf -n 1)\" "
 }
