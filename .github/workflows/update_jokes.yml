@@ -2,8 +2,8 @@ name: Update Jokes
 
 on:
   schedule:
-    - cron: "*/5 * * * *"  # Runs every day at midnight UTC
-  workflow_dispatch:  # Allows manual trigger
+    - cron: "0 0 * * *"  # Runs every day at midnight UTC
+    workflow_dispatch:  # Allows manual trigger
 
 jobs:
   update-jokes:
