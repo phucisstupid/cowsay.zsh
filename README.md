@@ -6,12 +6,12 @@ Zsh plugin that displays a joke with `cowsay` and `lolcat` every time you open a
 
 ### Using Zinit🌻
    ```sh
-   zinit depth"1" lucid nocd light-mode atload"joke" for phucleeuwu/cowsay.zsh 
+   zinit depth"1" lucid nocd light-mode atload"joke" for phucisstupid/cowsay.zsh 
    ```
 ### Manual Installation
 1. Clone the repository:
    ```sh
-   git clone https://github.com/phucleeuwu/cowsay.zsh.git ~/cowsay.zsh
+   git clone https://github.com/phucisstupid/cowsay.zsh.git ~/cowsay.zsh
    ```
 2. Source the plugin in your `.zshrc`:
    ```sh
@@ -26,7 +26,7 @@ Zsh plugin that displays a joke with `cowsay` and `lolcat` every time you open a
 Just open your terminal! The plugin will automatically display a joke every session 
 If you don't want automatic display:
    ```sh
-   zinit depth"1" lucid nocd light-mode for phucleeuwu/cowsay.zsh 
+   zinit depth"1" lucid nocd light-mode for phucisstupid/cowsay.zsh 
    ```
 
 You can also manually trigger it:
@@ -45,7 +45,7 @@ This repository includes a GitHub Actions workflow to update `jokes.txt` daily.
 To update jokes, use git pull for git install
 Zinit update:
 ```sh
-zinit update phucleeuwu/cowsay.zsh
+zinit update phucisstupid/cowsay.zsh
 ```
 
 ### Workflow Details:
@@ -75,5 +75,5 @@ brew install cowsay lolcat ripgrep jq
 MIT License - Feel free to use and modify!
 
 ---
-Made with 🐮💬 by [phucleeuwu](https://github.com/phucleeuwu)
+Made with 🐮💬 by [phucleeuwu](https://github.com/phucisstupid)
 
