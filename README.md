@@ -75,5 +75,5 @@ brew install cowsay lolcat ripgrep jq
 MIT License - Feel free to use and modify!
 
 ---
-Made with 🐮💬 by [phucleeuwu](https://github.com/phucisstupid)
+Made with 🐮💬 by [phucisstupid](https://github.com/phucisstupid)
 
